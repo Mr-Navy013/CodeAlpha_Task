@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+body {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+}
+
+#Calculator {
+    width: 90%;
+    max-width: 350px;
+    background-color: #000;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#Result {
+    height: 30%;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#input-container {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+#inputbox {
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    vertical-align: bottom;
+    font-size: 3vw;
+    border: none;
+    outline: none;
+    background-color: #000;
+    color: white;
+    white-space: nowrap;
+    position: relative;
+    padding: 45% 10px 0 10px ;
+}
+
+#inputbox::placeholder {
+    color: white;
+    position: relative;
+    text-align: right;
+}
+
+/* Buttons layout */
+#button-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+}
+
+.buttons-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Common button styles */
+.buttons,
+.buttons-color,
+.buttons-color-equal {
+    flex: 1;
+    margin: 5px;
+    height: 8vh;
+    min-height: 50px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+/* Number buttons */
+.buttons {
+    background-color: #181717;
+    color: white;
+}
+
+.buttons:active {
+    background-color: #252525;
+}
+
+/* Operator buttons */
+.buttons-color {
+    background-color: #181717;
+    color: #f17725;
+}
+
+.buttons-color:active {
+    background-color: #252525;
+}
+
+/* Equal button */
+.buttons-color-equal {
+    background-color: #f17725;
+    color: white;
+}
+
+.buttons-color-equal:active {
+    background-color: #d94f0c;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+    #header {
+        font-size: 1.2rem;
+    }
+
+    #inputbox {
+        font-size: 1.5rem;
+    }
+
+    .buttons,
+    .buttons-color,
+    .buttons-color-equal {
+        font-size: 1rem;
+        height: 7vh;
+    }
+}
